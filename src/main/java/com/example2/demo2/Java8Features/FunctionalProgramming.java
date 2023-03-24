@@ -1,19 +1,22 @@
 package com.example2.demo2.Java8Features;
 
-import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-@Log4j2
 public class FunctionalProgramming {
+    private static Logger log = LogManager.getLogger(FunctionalProgramming.class);
 
     public static void main(String[] args) {
+
         // Function functional interface
         Function<Long, String> adder = (value) -> String.valueOf(value + 3);
         String resultLambda = adder.apply((long) 8);
-        System.out.println(resultLambda==String.class + resultLambda);
+        log.info(resultLambda==String.class + resultLambda);
 
+        // Predicate functional interface
         Predicate pr = new Predicate() {
             @Override
             public boolean test(Object o) {
@@ -23,6 +26,6 @@ public class FunctionalProgramming {
         };
 
         boolean check = pr.test(3);
-        System.out.println(check);
+        log.info(String.valueOf(check));
     }
 }
