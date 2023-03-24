@@ -11,12 +11,12 @@ import java.util.Map;
 public class User {
     int id;
     String name;
-    int points;
+    int age;
 
-    public User(int id, String name, int points) {
+    public User(int id, String name, int age) {
         this.id = id;
         this.name = name;
-        this.points = points;
+        this.age = age;
     }
 
     public static void main(String[] args) {

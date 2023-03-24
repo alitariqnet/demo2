@@ -2,7 +2,6 @@ package com.example2.demo2.Sorting;
 
 import com.example2.demo2.Entity.User;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.data.relational.core.sql.In;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -12,7 +11,7 @@ public class UserComparator implements Comparator<User> {
 
     @Override
     public int compare(@NotNull User o1, @NotNull User o2) {
-        return Integer.compare(o1.getPoints(), o2.getPoints());
+        return Integer.compare(o1.getAge(), o2.getAge());
     }
 
     public static void main(String[] args) {
