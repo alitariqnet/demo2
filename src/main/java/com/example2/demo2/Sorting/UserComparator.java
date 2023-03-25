@@ -15,7 +15,7 @@ public class UserComparator implements Comparator<User> {
     }
 
     public static void main(String[] args) {
-        User user = new User(1,"Abu Bakr",99);
-        List<UserComparator> list = new ArrayList<UserComparator>();
+        User user = new User();
+        List<UserComparator> list = new ArrayList<>();
     }
 }

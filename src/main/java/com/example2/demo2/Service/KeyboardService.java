@@ -1,23 +1,22 @@
 package com.example2.demo2.Service;
 
-import com.example2.demo2.Entity.Keyboard;
+import com.example2.demo2.Entity.Item;
 import com.example2.demo2.Interfaces.Peripheral;
-import com.example2.demo2.Repository.KeyboardRepo;
+import com.example2.demo2.Repository.ItemRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
 public class KeyboardService implements Peripheral {
 
     @Autowired
-    KeyboardRepo keyboardRepo;
+    ItemRepo itemRepo;
 
-    public void save(Keyboard keyboard){
-        keyboardRepo.save(keyboard);
+    public void save(Item item){
+        itemRepo.save(item);
     }
 
     public void delete(Integer id){
-        keyboardRepo.deleteById(id);
+        itemRepo.deleteById(id);
     }
 }
