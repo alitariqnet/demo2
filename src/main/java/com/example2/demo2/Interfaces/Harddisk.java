@@ -1,4 +1,4 @@
-package com.example2.demo2.Abstract;
+package com.example2.demo2.Interfaces;
 
 public abstract class Harddisk {
     int price;
