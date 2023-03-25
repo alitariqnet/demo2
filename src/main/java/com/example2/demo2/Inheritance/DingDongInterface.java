@@ -3,6 +3,8 @@ package com.example2.demo2.Inheritance;
 public interface DingDongInterface {
     void printName();
     void sayHello();
+
+    int sum(int a, int b);
     /*
     The purpose of the default method is to provide external functionality without breaking the
     existing implementations. The original motivation behind introducing the default method was

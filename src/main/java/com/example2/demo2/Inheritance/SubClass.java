@@ -14,6 +14,15 @@ public class SubClass extends SuperClass{
         System.out.println("Hello from subclass");
     }
 
+    // overridden from dingdong interface
+    @Override
+    public int sum(int a, int b) {
+        return a + b;
+    }
+    // now overloaded that above method with no problem
+    public int sum(int a, int b,int c) {
+        return a + b + c;
+    }
     public static void main(String[] args) {
         SubClass sb = new SubClass("Umar");
         sb.sayHello();

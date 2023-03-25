@@ -1,6 +1,6 @@
 package com.example2.demo2.Inheritance;
 
-public class SuperClass implements DingDongInterface {
+public abstract class SuperClass implements DingDongInterface {
     String name;
     public SuperClass(String name) {
         System.out.println("Inside super class after sending in Super");
