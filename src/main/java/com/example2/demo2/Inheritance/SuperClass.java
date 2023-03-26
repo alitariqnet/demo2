@@ -1,9 +1,13 @@
 package com.example2.demo2.Inheritance;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public abstract class SuperClass implements DingDongInterface {
+    public static Logger log = LogManager.getLogger(SuperClass.class);
     String name;
     public SuperClass(String name) {
-        System.out.println("Inside super class after sending in Super");
+        log.info("Inside super class after sending in Super");
         this.name = name;
 
     }
@@ -17,7 +21,7 @@ public abstract class SuperClass implements DingDongInterface {
     }
 
     public void sayHello(){
-        System.out.println("Hello from superclass");
+        log.info("Hello from superclass");
     }
 
     /**

@@ -1,29 +1,36 @@
 package com.example2.demo2.Inheritance;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class SubClass extends SuperClass{
+    public static Logger log = LogManager.getLogger(SubClass.class);
     String name;
     public SubClass(String name) {
         //super should be the first line here can't write anything before its execution
         super(name);
-        System.out.println("Inside sub class after sending in Super");
+        log.debug(log.hashCode());
+        log.info("Inside sub class after sending in Super");
         this.name = name;
     }
 
     // no need to implement the print() method
     public void sayHello(){
-        System.out.println("Hello from subclass");
+        log.info("Hello from subclass");
     }
 
-    // overridden from dingdong interface
+    // override from dingdong interface
     @Override
     public int sum(int a, int b) {
         return a + b;
     }
-    // now overloaded that above method with no problem
+
+    // overloaded above method with no problem
     public int sum(int a, int b,int c) {
         return a + b + c;
     }
     public static void main(String[] args) {
+
         SubClass sb = new SubClass("Umar");
         sb.sayHello();
 //        SuperClass sp = new SubClass();
